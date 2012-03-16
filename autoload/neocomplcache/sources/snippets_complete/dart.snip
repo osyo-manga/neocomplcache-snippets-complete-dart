@@ -1,0 +1,101 @@
+snippet main
+    int
+    main(){
+    	${0}
+    	return 0;
+    }
+
+snippet     if
+abbr        if () {}
+    if (${1:/* condition */}) {
+        ${0:/* code */}
+    }
+snippet else
+    else {
+        ${0}
+    }
+
+snippet elseif
+    else if (${1:/* condition */}) {
+        ${0}
+    }
+
+snippet     ifelse
+abbr        if () {} else {}
+    if (${1:condition}) {
+        ${2}
+    } else {
+        ${3}
+    }
+
+snippet     for
+abbr        for ( ; ; ) {}
+    for (${1} = 0; $1 < ${2}; $1++) {
+        ${0}
+    }
+
+snippet     For
+abbr        for ( in ) {}
+    for (${1} in ${2}) {
+        ${0}
+    }
+
+snippet     while
+abbr        while () {}
+    while (${1:/* condition */}) {
+        ${0:/* code */}
+    }
+
+snippet     do_while
+alias       do
+    do {
+        ${0:/* code */}
+    } while (${1:/* condition */});
+
+snippet     switch
+abbr        switch () {}
+    switch (${1:var}) {
+        case ${2:val}:
+            ${0}
+            break;
+    }
+
+snippet     function
+alias       func
+abbr        func() {}
+    ${1:void} ${2:func_name}(${3}) {
+        ${0}
+    }
+
+snippet     Function
+alias       Func
+abbr        func() =>
+    ${1:void} ${2:func_name}(${3}) => ${0}
+
+snippet     try
+abbr        try catch
+    try {
+        ${1}
+    } catch (${2:exception}) {
+        ${3}
+    }
+
+snippet     tryfinnaly
+abbr        try finally
+    try {
+        ${1}
+    } finally {
+        ${2}
+    }
+
+snippet     trycatchfinnaly
+abbr        try catch finnaly
+    try {
+        ${1}
+    } catch (${2:exception}) {
+        ${3}
+    } finally {
+        ${4}
+    }
+
+
