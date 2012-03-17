@@ -53,10 +53,17 @@ alias       do
 
 snippet     switch
 abbr        switch () {}
-    switch (${1:var}) {
-        case ${2:val}:
+    switch (${1:expression}) {
+        case ${2:expression}:
             ${0}
             break;
+    }
+
+snippet     case
+abbr        case :
+    case ${1:expression}:
+        ${0}
+        break;
     }
 
 snippet     function
@@ -97,8 +104,118 @@ abbr        try catch finnaly
         ${4}
     }
 
+snippet     catch
+abbr        catch
+    catch (${1:exception}) {
+        ${2}
+    }
+
 snippet     import
 abbr        #import
-    #import('${1}');
+    #import('${1:library_name}');
+
+snippet     library
+abbr        #library
+    #library('${1:library_name}');
+
+snippet     source
+abbr        #source
+    #source('${1:source_file}');
+
+snippet     class
+abbr        class {}
+    class ${1:class_name} {
+        ${0}
+    }
+
+snippet     classT
+abbr        class <> {}
+    class ${1:class_name}<${2:type_parameter}> {
+        ${0}
+    }
+
+snippet     classextends
+abbr        class extends {}
+    class ${1:class_name} extends ${2:super_class} {
+        ${0}
+    }
+
+snippet     classTextends
+abbr        class <> extends {}
+    class ${1:class_name}<${2:type_parameter}> extends ${3:super_class} {
+        ${0}
+    }
+
+snippet     classimplements
+abbr        class implements {}
+    class ${1:class_name} implements ${2:interface} {
+        ${0}
+    }
+
+snippet     classTimplements
+abbr        class <> implements {}
+    class ${1:class_name}<${2:type_parameter}> implements ${3:interface} {
+        ${0}
+    }
+
+snippet     classextendsimplements
+abbr        class extends implements {}
+    class ${1:class_name} extends ${2:super_class} implements ${3:interface} {
+        ${0}
+    }
+
+snippet     classTextendsimplements
+abbr        class <> extends implements {}
+    class ${1:class_name}<${2:type_parameter}> extends ${3:super_class} implements ${4:interface} {
+        ${0}
+    }
+
+snippet     interface
+abbr        interface {}
+    interface ${1:interface_name} {
+        ${0}
+    }
+
+snippet     interfaceT
+abbr        interface <> {}
+    interface ${1:interface_name}<${2:type_parameter}> {
+        ${0}
+    }
+
+snippet     interfaceextends
+abbr        interface extends {}
+    interface ${1:interface_name} extends ${2:super_interface} {
+        ${0}
+    }
+
+snippet     interfaceTextends
+abbr        interface <> extends {}
+    interface ${1:interface_name}<${2:type_parameter}> extends ${3:super_interface}{
+        ${0}
+    }
+
+snippet     get
+abbr        get () {}
+    get ${1:getter_name}() {
+        ${0}
+    }
+
+snippet     Get
+abbr        get () => 
+    get ${1:getter_name}() => ${0};
+
+snippet     set
+abbr        set () {}
+    set ${1:setter_name}(${2:formal_parameter}) {
+        ${0}
+    }
+
+snippet     Set
+abbr        set () =>
+    set ${1:setter_name}(${2:formal_parameter}) => ${0};
+
+snippet     return
+abbr        return ;
+    return ${0};
 
 
